@@ -20,4 +20,7 @@
          02 CourseCode          PIC 9(1).
          02 EmailAdd            PIC X(28).
          02 EmailDomainName     PIC X(20).
-         02 CountryCode         PIC X(2).
+
+       FD Country.
+       01 CountryCode         PIC X(2).
+       01 CountryName X(26).
