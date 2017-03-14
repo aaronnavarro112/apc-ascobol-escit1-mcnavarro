@@ -13,17 +13,23 @@
        DATA DIVISION.
        FILE SECTION.
 
+       FD CountryCodes.
+       01 CountryRec            PIC X(28).
+           88 EndCountryCodes   VALUE HIGH-VALUES.
+
        FD GradInfo.
        01 GradDetails.
-         02 StudentName         PIC X(25).
-         02 GradYear            PIC 9(4).
-         02 CourseCode          PIC 9(1).
-         02 EmailAdd            PIC X(28).
+           88 EndGradInfo         VALUE HIGH-VALUES.
+           02 StudName            PIC X(25).
+           02 GradYear            PIC 9(4).
+           02 CourseCode          PIC 9.
+           02 EmailAdd            PIC X(28).
+           02 EmailDomain         PIC X(20).
+           02 CountryCode         PIC XX
 
-         01 CountryName         PIC X(26).
+
 
        SD CountryCodes.
-       01 CountryCode           PIC X(2).
        01 CCCountryName         PIC X(26).
 
        FD SortDomain.
